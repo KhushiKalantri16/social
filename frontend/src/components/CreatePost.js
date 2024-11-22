@@ -23,7 +23,7 @@ function CreatePost() {
     const token = localStorage.getItem("token");
 
     axios
-      .post("https://socialapp-gfqg.onrender.com/api/posts", postData, {
+      .post("https://social-abs8.onrender.com/", postData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

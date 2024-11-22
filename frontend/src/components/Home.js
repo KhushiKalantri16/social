@@ -8,7 +8,7 @@ function Home({ isAuthenticated }) {
 
   useEffect(() => {
     axios
-      .get("https://socialapp-gfqg.onrender.com/api/posts")
+      .get("https://social-abs8.onrender.com/")
       .then((response) => setPosts(response.data))
       .catch((error) => console.error("Error fetching posts:", error));
   }, []);
@@ -20,7 +20,7 @@ function Home({ isAuthenticated }) {
     }
 
     axios
-      .post(`https://socialapp-gfqg.onrender.com/api/posts/like/${postId}`)
+      .post(`https://social-abs8.onrender.com//${postId}`)
       .then((response) => {
         const updatedPosts = posts.map((post) =>
           post._id === postId ? response.data : post
@@ -38,7 +38,7 @@ function Home({ isAuthenticated }) {
 
     axios
       .post(
-        `https://socialapp-gfqg.onrender.com/api/posts/comment/${postId}`,
+        `https://social-abs8.onrender.com/${postId}`,
         {
           text: commentText,
         }
@@ -61,7 +61,7 @@ function Home({ isAuthenticated }) {
 
     try {
       const response = await axios.delete(
-        `https://socialapp-gfqg.onrender.com/api/posts/${postId}`
+        `https://social-abs8.onrender.com/${postId}`
       );
       console.log("Post deleted:", response.data);
       const updatedPosts = posts.filter((post) => post._id !== postId);

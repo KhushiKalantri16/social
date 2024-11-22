@@ -17,7 +17,7 @@ function Login({ setIsAuthenticated }) {
 
   const handleLogin = () => {
     axios
-      .post("https://socialapp-gfqg.onrender.com/api/login", credentials)
+      .post("https://social-abs8.onrender.com/", credentials)
       .then((response) => {
         console.log("Login successful:", response.data.message);
         localStorage.setItem("token", response.data.token);

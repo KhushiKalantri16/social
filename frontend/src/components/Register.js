@@ -20,7 +20,7 @@ function Register() {
 
   const handleRegister = () => {
     axios
-      .post("https://socialapp-gfqg.onrender.com/api/register", newUser)
+      .post("https://social-abs8.onrender.com/", newUser)
       .then((response) => {
         console.log("User registered successfully");
         setSuccess(true);
