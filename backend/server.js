@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5002;
 const User = require("./models/User");
 const Post = require("./models/Post");
 // Middleware
@@ -166,3 +166,6 @@ app.delete("/api/posts/:postId", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
+
